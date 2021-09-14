@@ -7,8 +7,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Ch13BoardDao2 {
 	private static final Logger logger = LoggerFactory.getLogger(Ch13BoardDao2.class);
-
+	
 	public Ch13BoardDao2() {
+		logger.info("실행");
+	}
+	
+	public void update() {
 		logger.info("실행");
 	}
 }

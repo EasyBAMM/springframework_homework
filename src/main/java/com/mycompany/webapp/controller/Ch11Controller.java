@@ -96,7 +96,7 @@ public class Ch11Controller {
 		return ("redirect:/ch11/content");
 	}
 
-	// DTO 객체(Command Object)와 폼 연결 - 기본값 제공
+	// DTO 객체(Command Object)와 폼 연결 - 기본값 제공(체크박스)
 	@GetMapping("/form3")
 	public String form3(@ModelAttribute("member") Ch11Member member, Model model) {
 		logger.info("실행");
@@ -120,7 +120,7 @@ public class Ch11Controller {
 		model.addAttribute("skillList", skillList);
 
 		// 기본 선택 항목을 설정
-		member.setMskill(new String[] { "SpringFramework", "Vue" });
+		member.setMskill(new int[] { 1, 3 });
 
 		return "ch11/form3";
 	}
@@ -187,4 +187,5 @@ public class Ch11Controller {
 
 		return "ch11/form5";
 	}
+
 }
